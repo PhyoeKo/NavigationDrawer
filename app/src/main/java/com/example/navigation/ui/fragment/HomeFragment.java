@@ -23,6 +23,8 @@ import com.example.navigation.R;
 import java.io.File;
 import java.io.FileOutputStream;
 
+import static android.content.Context.MODE_PRIVATE;
+
 
 /**
  * A simple {@link Fragment} subclass.
