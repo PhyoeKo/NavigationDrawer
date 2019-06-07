@@ -4,6 +4,7 @@ package com.example.navigation.ui.fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -29,6 +30,7 @@ public class GalleryFragment extends Fragment {
     private List<Model> movieList = new ArrayList<>();
     private RecyclerView recyclerView;
     private MovieAdapter mAdapter;
+    private CollapsingToolbarLayout collapsingToolbarLayout;
 
     public GalleryFragment() {
         // Required empty public constructor
@@ -51,6 +53,13 @@ public class GalleryFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mAdapter = new MovieAdapter(movieList);
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler);
+        collapsingToolbarLayout = (CollapsingToolbarLayout) view.findViewById(R.id.collapsing_toolbar);
+        collapsingToolbarLayout.setTitle("Phyoe Ko Ko Lwin");
+        collapsingToolbarLayout.setContentScrimColor(getResources().getColor(R.color.colorAccent));
+        collapsingToolbarLayout.setStatusBarScrimColor(getResources().getColor(R.color.design_default_color_primary));
+
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
+
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());

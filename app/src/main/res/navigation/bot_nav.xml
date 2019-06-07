@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bot_nav"
+    app:startDestination="@id/bot_camera">
+
+    <fragment
+        android:id="@+id/bot_camera"
+        android:name="com.example.navigation.Button_Camera"
+        android:label="fragment_bot_camera"
+        tools:layout="@layout/fragment_bot_camera" />
+    <fragment
+        android:id="@+id/bot_Share"
+        android:name="com.example.navigation.Bot_Share"
+        android:label="fragment_bot__share"
+        tools:layout="@layout/fragment_bot__share" />
+
+</navigation>
